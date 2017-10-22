@@ -1,5 +1,5 @@
 //
-// Created by andres on 10/22/17.
+// Created by Oxyrus on 10/22/17.
 //
 
 #ifndef ALGORITHMS_NODE_H
