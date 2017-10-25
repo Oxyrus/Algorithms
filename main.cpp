@@ -1,18 +1,18 @@
-#include "data-structures/binary-trees/Node.h"
+#include <iostream>
+#include "data-structures/lists/List.h"
 
 int main() {
-    auto *tree = new ds::BTree();
+    auto *list = new ds::List();
 
-    tree->Insert(10);
-    tree->Insert(6);
-    tree->Insert(14);
-    tree->Insert(3);
+    list->Insert(1);
+    list->Insert(2);
+    list->Insert(3);
+    list->Print();
 
-    tree->PreOrder();
-    tree->InOrder();
-    tree->PostOrder();
-
-    delete tree;
+    ds::Node *res = list->Search(2);
+    int *val = &res->Value;
+    std::cout << list->Search(2) << std::endl;
+    std::cout << *val << std::endl;
 
     return 0;
 }
