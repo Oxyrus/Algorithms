@@ -37,6 +37,7 @@ namespace ds {
         void InOrder(Node *leaf);
         void PostOrder(Node *leaf);
         void PreOrder(Node *leaf);
+        int MultiplesOfN(Node *leaf, int n);
 
         Node *Root;
     };
