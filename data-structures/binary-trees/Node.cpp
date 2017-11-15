@@ -113,4 +113,15 @@ namespace ds {
         PreOrder(Root);
         std::cout << "\n";
     }
+    
+    int BTree::MultiplesOfN(int n) {
+        return MultiplesOfN(Root, n);
+    }
+    
+    int BTree::MultiplesOfN(Node *leaf, int n) {
+        if (leaf == nullptr) return 0;
+        int leftCount = MultiplesOfN(leaf->Left, n);
+        int rightCount = MultiplesOfN(leaf->Right, n);
+        return ((leaf->Value % n) == 0 ? 1 : 0) + leftCount + rightCount;
+    }
 };
