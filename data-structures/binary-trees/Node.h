@@ -28,6 +28,7 @@ namespace ds {
         void InOrder();
         void PostOrder();
         void PreOrder();
+        int MultiplesOfN(int n);
 
     private:
         void DestroyTree(Node *leaf);
