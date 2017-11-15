@@ -28,6 +28,7 @@ namespace ds {
         void InOrder();
         void PostOrder();
         void PreOrder();
+        void PrintLeaves();
         int MultiplesOfN(int n);
 
     private:
@@ -37,6 +38,7 @@ namespace ds {
         void InOrder(Node *leaf);
         void PostOrder(Node *leaf);
         void PreOrder(Node *leaf);
+        void PrintLeaves(Node *leaf);
         int MultiplesOfN(Node *leaf, int n);
 
         Node *Root;
