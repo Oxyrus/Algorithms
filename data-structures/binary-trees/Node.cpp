@@ -114,6 +114,18 @@ namespace ds {
         std::cout << "\n";
     }
     
+    void BTree::PrintLeaves() {
+        return PrintLeaves(Root);
+    }
+    
+    void BTree::PrintLeaves(Node *leaf) {
+        if (leaf == nullptr) return;
+        if (leaf->Right == nullptr && leaf->Left == nullptr)
+            std::cout << leaf->Value << std::endl;
+        PrintLeaves(leaf->Left);
+        PrintLeaves(leaf->Right);
+    }
+    
     int BTree::MultiplesOfN(int n) {
         return MultiplesOfN(Root, n);
     }
